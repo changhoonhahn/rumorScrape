@@ -1,0 +1,45 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "rumorScrape"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/rumorScrape"
+license = "BSD license"
+author = 'C. Hahn'
+author_email = "changh20@gmail.com"
+
+[tool.briefcase.app.rumorScrape]
+formal_name = "rumorScrape"
+description = "Scrape astro rumor mill"
+icon = "src/rumorScrape/resources/rumorScrape"
+sources = ['src/rumorScrape']
+requires = []
+
+
+[tool.briefcase.app.rumorScrape.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.rumorScrape.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.rumorScrape.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.rumorScrape.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.rumorScrape.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
